@@ -1,0 +1,74 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+    'navbar navbar'
+    'aside-bar main'
+    'footer footer';
+    height: 100vh;
+}
+
+.navbar {
+    grid-area: navbar;
+    padding: 1vh;
+    background-color:aliceblue;
+    color: azure;
+}
+
+.aside-bar{
+    grid-area: asidebar;
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:cornflowerblue;
+    overflow-x: hidden;
+    padding-top: 15vh;
+}
+
+.aside-bar a{
+    padding: 2vh 3vh 2vh 4vh;
+    text-decoration: none;
+    font-size: 20px;
+    color: azure;
+    display: block;
+}
+
+.aside-bar h2 {
+    color: azure;
+    text-align: center;
+    text-shadow: 1px 1px 0 black;
+}
+
+.aside-bar a:hover{
+    color: #a1a1a1;
+}
+
+.main {
+    grid-area: main;
+    margin-left: 150px;
+    padding: 0 3vh;
+
+}
+
+.footer {
+    grid-area: footer;
+}
+
+
+@media screen and (max-width: 500px) {
+    .aside-bar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .aside-bar a {float: left;}
+    div.main {margin-left: 0;}
+  }
