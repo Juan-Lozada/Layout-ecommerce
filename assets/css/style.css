@@ -2,7 +2,7 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color:aliceblue;
+    background-color:#EEEDDE;
 }
 
 .grid-container {
@@ -11,14 +11,17 @@ html, body {
     'navbar navbar navbar'
     'aside-bar main main'
     'footer footer footer';
+    grid-template-columns: 15% auto;
     height: 100vh;
+
     
 }
 
 
+/* navbar */
 .navbar {
     grid-area: navbar;
-    background-color:cornflowerblue;
+    background-color:#141E27;
     color: azure;
 }
 
@@ -28,34 +31,37 @@ html, body {
     text-align: center;
 }
 
+
+/* aside-bar */
 .aside-bar{
     grid-area: aside-bar;
     width: 150px;
-    background-color:azure;
+    background-color:#203239;
     overflow-x: hidden;
     padding-top: 10vh;
     
 }
 
 .aside-bar a{
+    display: flex;
+    flex-direction: column;
     padding: 2vh 3vh 2vh 4vh;
     text-decoration: none;
     font-size: 20px;
-    color: black;
-    display: block;
-    justify-content: center;
+    color: snow;
 }
 
 .aside-bar h2 {
-    color: black;
+    color: snow;
     text-align: center;
-    text-shadow: 1px 1px 0 azure;
+    text-shadow: 1px 1px 0 black;
 }
 
 .aside-bar a:hover{
     color: #a1a1a1;
 }
 
+/* Main Container */
 .main-container {
     grid-area: main;
     padding-bottom: 5vh;
@@ -72,15 +78,17 @@ html, body {
 }
 
 .card {
-    display: grid;
-    grid-auto-flow: row;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: azure;
+    background-color: #203239;
+    padding-top: 2vh;
+    color: snow;
 }
 
 .card:hover {
-    box-shadow: 1px 0 10px 0 cornflowerblue;
+    box-shadow: 1px 0 10px 0 #141E27;
   
 }
 
@@ -90,29 +98,29 @@ html, body {
     height: 30vh;
 }
 
-.footer {
-    grid-area: footer;
-    height: 100%;
-    color: white;
-    padding: 1vh;
-    background-color: cornflowerblue;
-    text-align: center;
-}
 
+/* Botones */
 .boton {
     margin: auto;
     transition-duration: 0.4s;
     width: 50%;
     border-radius: 4px;
-    
+    background-color: #EEEDDE;
 }
 
 .boton:hover {
-    background-color: cornflowerblue;
-    color: white;
+    background-color:#141E27;
+    color: snow;
 }
 
-
+.footer {
+    grid-area: footer;
+    height: 100%;
+    color: white;
+    padding: 1vh;
+    background-color: #141E27;
+    text-align: center;
+}
 
 @media screen and (max-width: 500px) {
     .aside-bar {
