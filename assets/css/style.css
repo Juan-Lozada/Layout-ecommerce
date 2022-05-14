@@ -11,13 +11,26 @@ html, body {
     'navbar navbar navbar'
     'aside-bar main main'
     'footer footer footer';
-    grid-template-columns: 15% auto;
+
     height: 100vh;
 
     
 }
 
-
+@media screen and (max-width: 500px) {
+    
+    .grid-container {
+        display: grid;
+        grid-template-areas: 
+        'navbar'
+        'aside-bar'
+        'main'
+        'footer';
+    }
+    .aside-bar{
+        display: block;
+    } 
+}
 /* navbar */
 .navbar {
     grid-area: navbar;
@@ -71,8 +84,9 @@ html, body {
 
 .cards {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 10vh;
+    grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+    grid-auto-rows: 30rem;
+    gap: 1rem;
 
     
 }
@@ -122,12 +136,22 @@ html, body {
     text-align: center;
 }
 
-@media screen and (max-width: 500px) {
-    .aside-bar {
-      width: 100%;
-      height: auto;
-      position: relative;
+/* @media screen and (max-width: 500px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas: 
+        'navbar'
+        'aside-bar'
+        'main'
+        'footer';
     }
-    .aside-bar a {float: left;}
-    div.main {margin-left: 0;}
-  }
+
+    .cards {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .navbar {
+        width: 100vh;`
+    }
+  } */
